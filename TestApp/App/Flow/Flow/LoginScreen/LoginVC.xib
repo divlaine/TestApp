@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="Doorman" customModuleProvider="target">
+            <connections>
+                <outlet property="loginTextfield" destination="bO0-b8-Urt" id="Rtz-Az-BiZ"/>
+                <outlet property="passwordTextfield" destination="V6Z-qm-krN" id="qMs-qR-Dgu"/>
+                <outlet property="signInButton" destination="nf3-8I-xbp" id="f7F-Es-bq1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-bg" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-Pc-sAN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c3S-wx-ijl">
+                    <rect key="frame" x="87" y="158.5" width="240" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="NQx-de-xyG"/>
+                        <constraint firstAttribute="width" constant="240" id="lYk-Jz-lo1"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xiS-H3-vQh">
+                    <rect key="frame" x="57" y="358.5" width="300" height="99"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Login" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bO0-b8-Urt">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="m1Z-yY-ldH"/>
+                            </constraints>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="24"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            <connections>
+                                <action selector="onEditingDidBegin:" destination="-1" eventType="editingDidBegin" id="Mio-Gf-y7A"/>
+                                <action selector="onEditingDidEnd:" destination="-1" eventType="editingDidEnd" id="Py8-1Y-keM"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="V6Z-qm-krN">
+                            <rect key="frame" x="0.0" y="49" width="300" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="NJq-EX-IdB"/>
+                            </constraints>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="24"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            <connections>
+                                <action selector="onEditingDidBegin:" destination="-1" eventType="editingDidBegin" id="W0o-pC-aj7"/>
+                                <action selector="onEditingDidEnd:" destination="-1" eventType="editingDidEnd" id="w4V-SI-XBz"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="5M6-uT-U5l"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-8I-xbp">
+                    <rect key="frame" x="57" y="497.5" width="300" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="njS-eb-Wm4"/>
+                        <constraint firstAttribute="height" constant="50" id="pkh-7v-8Xz"/>
+                    </constraints>
+                    <state key="normal" title="Sign In"/>
+                    <connections>
+                        <action selector="onTapSignIn:" destination="-1" eventType="touchUpInside" id="50c-Q2-4lr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8Gm-Pc-sAN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4ce-II-gbz"/>
+                <constraint firstItem="nf3-8I-xbp" firstAttribute="top" secondItem="xiS-H3-vQh" secondAttribute="bottom" constant="40" id="7dc-Bt-TvJ"/>
+                <constraint firstItem="xiS-H3-vQh" firstAttribute="centerX" secondItem="8Gm-Pc-sAN" secondAttribute="centerX" id="C1i-n6-W5Y"/>
+                <constraint firstItem="nf3-8I-xbp" firstAttribute="centerX" secondItem="8Gm-Pc-sAN" secondAttribute="centerX" id="Gt8-jl-bTM"/>
+                <constraint firstItem="xiS-H3-vQh" firstAttribute="centerY" secondItem="8Gm-Pc-sAN" secondAttribute="centerY" constant="-40" id="P0x-Ue-rfg"/>
+                <constraint firstItem="xiS-H3-vQh" firstAttribute="top" secondItem="c3S-wx-ijl" secondAttribute="bottom" constant="40" id="PT8-1U-zkC"/>
+                <constraint firstItem="c3S-wx-ijl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="SZM-w0-0V6"/>
+                <constraint firstItem="8Gm-Pc-sAN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oQW-TD-PmB"/>
+                <constraint firstAttribute="bottom" secondItem="8Gm-Pc-sAN" secondAttribute="bottom" id="wfL-dV-GJi"/>
+                <constraint firstAttribute="trailing" secondItem="8Gm-Pc-sAN" secondAttribute="trailing" id="xXx-E3-zyW"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login-bg" width="540" height="960"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
